@@ -29,7 +29,7 @@ void loop() {
     digitalWrite(RelaisPin, LOW);
   }
 
-  else if (tempe <= 37,3){
+  else if (tempe <= 36,5){
     digitalWrite(RelaisPin, HIGH);
   }
 }
