@@ -21,7 +21,7 @@ void loop() {
   delay(1000);
   // read the value from the sensor:
   sensorValue = analogRead(sensorPin);
-  tempe = ((961 - sensorValue)/11.0)+1 ;
+  tempe = ((961 - sensorValue)/11.0)-1.3 ;
   Serial.println(tempe);
 
   //Controller of Relais
@@ -29,7 +29,7 @@ void loop() {
     digitalWrite(RelaisPin, LOW);
   }
 
-  else if (tempe <= 36,5){
+   if (tempe <= 37.3){
     digitalWrite(RelaisPin, HIGH);
   }
 }
